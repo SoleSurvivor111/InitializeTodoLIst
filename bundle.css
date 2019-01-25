@@ -60,7 +60,8 @@ body {
     font-size: 24px;
     margin-left: 5px;
     outline: none;
-    padding: 16px 16px 16px 0; }
+    padding: 16px 16px 16px 0;
+    width: 0; }
 
 .le {
   list-style: none;
@@ -72,21 +73,23 @@ body {
     left: 50px;
     position: absolute;
     top: 0;
-    width: 500px; }
+    width: 91%; }
 
 .view {
   align-items: center;
   border-bottom: 1px solid lightgray;
   display: flex;
-  height: 86px;
   justify-content: space-between;
+  min-height: 86px;
   width: 100%; }
   .view:hover .view__destroy {
     visibility: visible; }
   .view__toggle {
+    align-self: flex-start;
     color: green;
     height: 40px;
     margin-left: 10px;
+    margin-top: 24px;
     width: 40px; }
     .view__toggle:checked ~ .view__lable {
       opacity: 0.3;
@@ -95,12 +98,15 @@ body {
     color: #4d4d4d;
     flex: 1 1;
     font-size: 24px;
-    padding: 15px; }
+    padding: 15px;
+    word-break: break-all; }
   .view__destroy {
+    align-self: flex-end;
     background-color: transparent;
     border: none;
     height: 40px;
-    margin: auto 20px auto 0;
+    margin-bottom: 24px;
+    margin-right: 20px;
     opacity: 0.5;
     visibility: hidden;
     width: 40px; }
@@ -120,9 +126,11 @@ body {
 .footer {
   border-top: 1px solid #e6e6e6;
   color: #777777;
-  flex: 0 1 41px;
+  flex: 0 1;
+  min-width: 200px;
   padding: 10px 15px;
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .footer__todo-count {
     float: left;
     height: 20px;
@@ -143,9 +151,10 @@ body {
       text-decoration: underline; }
 
 .filters {
-  left: 30%;
+  left: 0;
   list-style: none;
-  position: absolute; }
+  position: absolute;
+  right: 0; }
 
 .li {
   display: inline; }
