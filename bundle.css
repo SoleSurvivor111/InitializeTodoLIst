@@ -73,7 +73,8 @@ body {
     left: 50px;
     position: absolute;
     top: 0;
-    width: 91%; }
+    width: 91%;
+    white-space: normal; }
 
 .view {
   align-items: center;
