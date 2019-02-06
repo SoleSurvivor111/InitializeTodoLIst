@@ -204,6 +204,8 @@ body {
       border-color: green; }
 
 @media only screen and (max-width: 430px) {
+  .todos {
+    left: 10%; }
   .footer {
     flex: 0 1 71px; }
   .filters {
