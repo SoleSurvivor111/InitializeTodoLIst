@@ -106,7 +106,7 @@ body {
     color: green;
     height: 40px;
     margin-left: 10px;
-    margin-top: 24px;
+    margin-top: 22px;
     opacity: 0;
     width: 40px; }
     .view__toggle:checked ~ .view__lable {
@@ -121,7 +121,7 @@ body {
     height: 40px;
     left: 9.5px;
     position: absolute;
-    top: 24px;
+    top: 22px;
     width: 40px;
     z-index: -1; }
     .view__checkbox:checked {
@@ -137,7 +137,7 @@ body {
     background-color: transparent;
     border: 0;
     height: 40px;
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     margin-right: 20px;
     opacity: .5;
     position: relative;
