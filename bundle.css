@@ -28,14 +28,29 @@ body {
   flex: 0 1 550px;
   flex-direction: column;
   margin-bottom: 130px;
-  margin-top: 130px; }
+  margin-top: 200px;
+  position: relative; }
+
+.todos {
+  background: url(src/images/todos.png) no-repeat 50% 50%;
+  background-size: cover;
+  border: 1px solid black;
+  height: 198px;
+  left: 25%;
+  position: absolute;
+  top: -200px;
+  width: 306px; }
+  .todos__h1 {
+    font-size: 30px;
+    padding-left: 8px;
+    padding-top: 81px; }
 
 .header {
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
   display: flex;
   flex: 0 1 65px; }
   .header__toggle-all {
-    border: none;
+    border: 0;
     bottom: 100%;
     height: 1px;
     opacity: 0;
@@ -55,11 +70,11 @@ body {
       transform: rotate(90deg) translate(10px, 10px); }
   .header__new-todo {
     background: rgba(0, 0, 0, 0.003);
-    border: none;
+    border: 0;
     flex: 1 1;
     font-size: 24px;
     margin-left: 5px;
-    outline: none;
+    outline: 0;
     padding: 16px 16px 16px 0;
     width: 0; }
 
@@ -71,11 +86,10 @@ body {
     font-size: 25px;
     height: 100%;
     left: 50px;
+    padding: 15px;
     position: absolute;
     top: 0;
-    width: 91%;
-    white-space: normal;
-    padding: 15px;}
+    width: 91%; }
 
 .view {
   align-items: center;
@@ -87,15 +101,31 @@ body {
   .view:hover .view__destroy {
     visibility: visible; }
   .view__toggle {
+    -webkit-appearance: none;
     align-self: flex-start;
     color: green;
     height: 40px;
     margin-left: 10px;
     margin-top: 24px;
+    opacity: 0;
     width: 40px; }
     .view__toggle:checked ~ .view__lable {
-      opacity: 0.3;
+      opacity: .3;
       text-decoration: line-through; }
+    .view__toggle:checked ~ .view__checkbox {
+      background: url(src/images/checked.png) no-repeat 50% 50%;
+      background-size: 45px; }
+  .view__checkbox {
+    border: 1px solid gray;
+    border-radius: 50%;
+    height: 40px;
+    left: 9.5px;
+    position: absolute;
+    top: 24px;
+    width: 40px;
+    z-index: -1; }
+    .view__checkbox:checked {
+      background: url(src/images/checked.png) no-repeat 50% 50%; }
   .view__lable {
     color: #4d4d4d;
     flex: 1 1;
@@ -105,11 +135,12 @@ body {
   .view__destroy {
     align-self: flex-end;
     background-color: transparent;
-    border: none;
+    border: 0;
     height: 40px;
     margin-bottom: 24px;
     margin-right: 20px;
-    opacity: 0.5;
+    opacity: .5;
+    position: relative;
     visibility: hidden;
     width: 40px; }
     .view__destroy:hover {
@@ -117,12 +148,14 @@ body {
     .view__destroy:focus {
       outline: none; }
     .view__destroy::before {
-      color: red;
-      content: '\D7';
-      font-size: 40px;
+      background: url(src/images/cross.png) no-repeat 50% 50%;
+      background-size: 40px;
+      content: '';
       font-weight: 100;
       height: 40px;
-      transform: translate(0, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
       width: 40px; }
 
 .footer {
@@ -137,10 +170,10 @@ body {
     float: left;
     height: 20px;
     text-align: left;
-    width: 67.7px; }
+    width: auto; }
   .footer__clear-completed {
     background-color: transparent;
-    border: none;
+    border: 0;
     color: inherit;
     cursor: pointer;
     float: right;
